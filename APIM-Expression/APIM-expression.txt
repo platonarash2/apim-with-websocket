@@ -15,12 +15,12 @@
         <base />
         <choose>
             <when condition="@(Convert.ToInt32(context.Request.IpAddress.ToString().Last())%2==0)">
-                <set-backend-service base-url="wss://deltatest1.azurewebsites.net/ws" />
+                <set-backend-service base-url="wss://mywebsite1.azurewebsites.net/ws" />
             </when>
         </choose>
         <choose>
             <when condition="@(Convert.ToInt32(context.Request.IpAddress.ToString().Last())%2==1)">
-                <set-backend-service base-url="wss://deltatest2.azurewebsites.net/ws" />
+                <set-backend-service base-url="wss://mywebsite2.azurewebsites.net/ws" />
             </when>
         </choose>
     </inbound>
